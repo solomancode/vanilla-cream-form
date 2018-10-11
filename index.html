@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sign Up</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sign Up</h1>
+            <p tabindex="0">Please fill in the required fields marked with an * .</p>
+        </header>
+        <form novalidate class="signup-form" id="signupForm">
+            <p id="signupAriaLive" class="sr-content" aria-live="polite"></p>
+            <fieldset>
+                <label for="email">Email <sup class="asterisk">*</sup>
+                    <input name="email" aria-required="true" required autofocus type="email" placeholder="example@mail.com" id="email" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="password">Password <sup class="asterisk">*</sup>
+                    <input name="password" aria-required="true" required minlength="6" type="password" placeholder="must have at least 6 characters" id="password" />
+                    <span aria-labelledby="password-strength-tip" class="strength-meter"></span>
+                </label>
+                <small id="password-strength-tip" class="tip">A strong password should consist of numbers, letters and symbols.</small>
+            </fieldset>
+            <fieldset>
+                <label for="fullName">
+                    Full Name
+                    <input name="full name" type="text" placeholder="enter your full name" id="fullName" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="username">Username <sup class="asterisk">*</sup>
+                    <input name="user name" aria-required="true" required type="text" placeholder="a name to be used to sign in" id="username" />
+                </label>
+            </fieldset>
+            <input id="signupButton" type="submit" value="Create Account"/>
+        </form>
+    </main>
+    <script src="form-validator.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
